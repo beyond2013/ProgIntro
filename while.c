@@ -5,7 +5,7 @@ int main (void)
 	while(i<10) // condition
 	{
 		printf("%d \n", i);
-		i++; // increment
+		i = i + 2 ; //i+=2; // increment
 	}
 }
 

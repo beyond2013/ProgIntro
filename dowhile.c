@@ -12,5 +12,6 @@ int main(void)
 		scanf(" %c",&choice);
 	}
 	while(choice=='y' || choice == 'Y');
+	printf("%d\n", count);
 }
 
