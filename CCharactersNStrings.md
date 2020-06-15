@@ -36,9 +36,9 @@ When defining a character array to contain a string, the array must be large eno
 The character-handling library (<ctype.h>) includes several functions that perform useful tests and manipulations of character data. Each function receives an unsigned char (represented as an int) or EOF as an argument. Characters
 are often manipulated as integers, because a character in C is a one-byte integer. EOF normally has the value –1. Following table summarizes the functions of the character-handling library.
 
-|Prototype             | Function description                                        |
-|-----|--------|
-|int isblank( int c ); |Returns a true value if c is a blank character that separates words in a line of text and 0 (false) otherwise.             |
+|Prototype                     | Function description                                        |
+|------------------|------------------------------------|
+| int isblank( int c ); |Returns a true value if c is a blank character that separates words in a line of text and 0 (false) otherwise.|
 |int isdigit( int c ); |Returns a true value if c is a digit and 0 (false) otherwise.|
 |int isalpha( int c ); |Returns a true value if c is a letter and 0 otherwise.       |
 |int isalnum( int c ); |Returns a true value if c is a digit or a letter and 0 otherwise. |                                  |int isxdigit( int c );| Returns a true value if c is a hexadecimal digit character and  0 otherwise.|
