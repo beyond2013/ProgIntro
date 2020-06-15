@@ -37,7 +37,7 @@ The character-handling library (<ctype.h>) includes several functions that perfo
 are often manipulated as integers, because a character in C is a one-byte integer. EOF normally has the value –1. Following table summarizes the functions of the character-handling library.
 
 |Prototype             | Function description                                        |
-|======================|=============================================================|
+|-----|--------|
 |int isblank( int c ); |Returns a true value if c is a blank character that separates|
 |                      |words in a line of text and 0 (false) otherwise.             |
 |                      |                                                             |
