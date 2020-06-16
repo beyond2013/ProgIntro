@@ -32,4 +32,5 @@ int main( void )
 			"printing character other than a space",
 			"Space", isgraph( ' ' ) ? " is a " : " is not a ",
 			"printing character other than a space" );
+	return 0;
 }

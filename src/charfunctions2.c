@@ -29,4 +29,5 @@ int main( void )
 			"7 converted to uppercase is ", toupper('7') ,
 			"$ converted to uppercase is ", toupper('$') ,
 			"L converted to lowercase is ", tolower('L') );
+	return 0;
 } 

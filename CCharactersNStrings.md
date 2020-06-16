@@ -144,6 +144,7 @@ int main( void )
 			"7 converted to uppercase is ", toupper('7') ,
 			"$ converted to uppercase is ", toupper('$') ,
 			"L converted to lowercase is ", tolower('L') );
+	return 0;
 }
 ```
 ### Functions isspace, iscntrl, ispunct, isprint and isgraph
@@ -188,6 +189,7 @@ int main( void )
 			"printing character other than a space",
 			"Space", isgraph( ' ' ) ? " is a " : " is not a ",
 			"printing character other than a space" );
+	return 0;
 }
 
 ```
