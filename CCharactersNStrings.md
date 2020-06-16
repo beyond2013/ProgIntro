@@ -229,6 +229,8 @@ Function strtoul converts to unsigned long int a sequence of characters represen
 ## Standard Input/Output Library Functions
 This section presents several functions from the standard input/output library ( <stdio.h> ) specifically for manipulating character and string data. Table below summarizes the character and string input/output functions of the standard input/output library.
 
+TABLE GOES HERE PAGE 346
+
 
 ### Functions fgets and putchar
 
@@ -262,4 +264,37 @@ ing string data (copying strings and concatenating strings), comparing strings, 
 TABLE GOES HERE PAGE 350
 
 
+
 Every function—except for strncpy —appends the null character to its result.
+
+Functions strncpy and strncat specify a parameter of type size\_t . Function strcpy
+copies its second argument (a string) into its first argument—a character array that you must ensure is large enough to store the string and its terminating null character, which is also copied.
+Function strncpy is equivalent to strcpy , except that strncpy specifies the number of characters to be copied from the string into the array. 
+Function strncpy does not necessarily copy the terminating null character of its second argument. This occurs only if the number of characters to be copied is at least one more than the length of the string. 
+For example, if "test" is the second argument, a terminating null character is written only if the third argument to strncpy is at least 5 (four characters in "test" plus a terminating null character). If the third argument is larger than 5 , null characters are appended to the array until the total number of characters specified by the third argument are written.
+
+### Functions strcpy and strncpy
+[Example code](https://github.com/beyond2013/ProgIntro/tree/master/src/strcp_strncpy.c) uses strcpy to copy the entire string in array x into array y and uses strncpy
+to copy the first 14 characters of array x into array z . A null character ( '\0' ) is appended to array z , because the call to strncpy in the program does not write a terminating null character (the third argument is less than the string length of the second argument). 
+
+## Comparison Functions of the String-Handling Library
+
+This section presents the string-handling library’s string-comparison functions, strcmp and strncmp . Table below contains their prototypes and a brief description of each function.
+
+[Example code](https://github.com/beyond2013/ProgIntro/tree/master/src/strcmp_strncmp.c) uses strcpy to copy the entire string in array x into array y and uses strncpy compares three strings using strcmp and strncmp . Function strcmp compares its first string argument with its second string argument, character by character. The function returns 0 if the strings are equal, a negative value if the first string is less than the second string and a positive value if the first string is greater than the second string. Function strncmp is equivalent to strcmp , except that strncmp compares up to a specified number of characters. Function strncmp does not compare characters following a null character in a string. The program prints the integer value returned by each function call.
+
+To understand just what it means for one string to be "greater than" or "less than"
+another, consider the process of alphabetizing a series of last names. The reader would, no doubt, place "Jones" before "Smith," because the first letter of "Jones" comes before the first letter of "Smith" in the alphabet. But the alphabet is more than just a list of 26 letters—it’s an ordered list of characters. Each letter occurs in a specific position within the list. "Z" is more than merely a letter of the alphabet; "Z" is specifically the 26th letter of the alphabet.
+How do the string comparison functions know that one particular letter comes before another? All characters are represented inside the computer as numeric codes in character sets such as ASCII and Unicode; when the computer compares two strings, it actually compares the numeric codes of the characters in the strings.
+
+## Search Functions of the String-Handling Library
+
+This section presents the functions of the string-handling library used to search strings for characters and other strings. The functions are summarized in table below. The functions strcspn and strspn return size\_t .
+
+TABLE ON PAGE 355
+
+### Function strchr
+Function strchr searches for the first occurrence of a character in a string. If the character is found, strchr returns a pointer to the character in the string; otherwise, strchr returns NULL . [Example code](https://github.com/beyond2013/ProgIntro/tree/master/src/strchr.c) searches for the first occurrences of 'a' and 'z' in "This is a test" .
+
+### Function strcspn
+Function strcspn [Example code]() determines the length of the initial part of the string in its first argument that does not contain any characters from the string in its second argument. The function returns the length of the segment.
