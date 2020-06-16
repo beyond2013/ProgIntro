@@ -193,4 +193,73 @@ int main( void )
 }
 
 ```
+## String Conversion Functions 
 
+This section presents the string-conversion functions from the general utilities library
+(<stdlib.h>) . These functions convert strings of digits to integer and floating-point values. Table below summarizes the string-conversion functions. 
+
+|Function prototype |  Function description |
+|---------|------------|
+|double strtod( const char \*nPtr, char \*\*endPtr );| Converts the string nPtr to double |
+|long strtol( const char \*nPtr, char \*\*endPtr, int base );|Converts the string nPtr to long |
+|unsigned long strtoul( const char \*nPtr, char \*\*endPtr, int base );|
+Converts the string nPtr to unsigned long |
+
+The C standard also includes strtoll and strtoull for converting strings to long long int and unsigned long long respectively. Note the use of const to declare variable nPtr in the function headers (read from right to left as "nPtr is a pointer to a character constant"); const specifies that the argument value will not be modified.
+
+### Function strtod
+
+Function strtod converts a sequence of characters representing a floating-point value to double . The function returns 0 if it’s unable to convert any portion of its first argument to double . 
+The function receives two arguments—a string ( char \* ) and a pointer to a
+string ( char \*\* ). The string argument contains the character sequence to be converted to double any whitespace characters at the beginning of the string are ignored. The function uses the char \*\* argument to modify a char \* in the calling function ( stringPtr ) so that it points to the location of the first character after the converted portion of the string or to the entire string if no portion can be converted.
+
+[Link to programming example](https://github.com/beyond2013/ProgIntro/tree/master/src/strtod.c)
+
+### Function strtol
+
+Function strtol converts to long int a sequence of characters representing an integer.The function returns 0 if it’s unable to convert any portion of its first argument to long int . The function receives three arguments—a string ( char * ), a pointer to a string and an integer. The string argument contains the character sequence to be converted to double any whitespace characters at the beginning of the string are ignored. The function uses the char ** argument to modify a char * in the calling function ( remainderPtr ) so that it points to the location of the first character after the converted portion of the string or to the entire string if no portion can be converted.
+
+[Link to programming example](https://github.com/beyond2013/ProgIntro/tree/master/src/strtol.c)
+
+### Function strtoul
+Function strtoul converts to unsigned long int a sequence of characters representing an unsigned long int value. The function works identically to function strtol. The statement x = strtoul( string, &remainderPtr, 0 ); in line 12 of example code indicates that x is assigned the unsigned long int value converted from string . The second argument, &remainderPtr , is assigned the remainder of string after the conversion. The third argument, 0 , indicates that the value to be converted can be in octal, decimal or hexadecimal format
+
+[Link to programming example](https://github.com/beyond2013/ProgIntro/tree/master/src/strtoul.c)
+
+## Standard Input/Output Library Functions
+This section presents several functions from the standard input/output library ( <stdio.h> ) specifically for manipulating character and string data. Table below summarizes the character and string input/output functions of the standard input/output library.
+
+
+### Functions fgets and putchar
+
+[Example code](https://github.com/beyond2013/ProgIntro/tree/master/src/fgetsputs.c) uses functions fgets and putchar to read a line of text from the standard input (keyboard) and recursively output the characters of the line in reverse order. 
+Function fgets reads characters from the standard input into its first argument an array of chars until a newline or the end-of-file indicator is encountered, or until the maximum number of characters is read. 
+The maximum number of characters is one fewer than the value specified in fgets’s second argument. 
+The third argument specifies the stream from which to read characters—in this case, we use the standard input stream ( stdin ). A null character ( '\0' ) is appended to the array when reading terminates.
+
+Function putchar prints its character argument. The program calls recursive function reverse to print the line of text backward. 
+If the first character of the array received by reverse is the null character '\0' , reverse returns. Otherwise, reverse is called again with the address of the subarray beginning at element sPtr[1] , and character sPtr[0] is output with putchar when the recursive call is completed. 
+The order of the two statements in the else portion of the if statement causes reverse to walk to the terminating null character of the string before a character is printed.
+As the recursive calls are completed, the characters are output in reverse order.
+
+### Function getchar
+[Example code](https://github.com/beyond2013/ProgIntro/tree/master/src/getchar.c) uses functions getchar and puts to read characters from the standard input into character array sentence and display the characters as a string. Function getchar reads a character from the standard input and returns the character as an integer. As you
+know, function puts takes a string as an argument and displays the string followed by a
+newline character. The program stops inputting characters when either 79 characters have
+been read or when getchar reads the newline character entered by the user to end the line of text. A null character is appended to array sentence (line 14) so that the array may be treated as a string. Then, line 17 uses puts to display the string contained in sentence. 
+
+### Function sprintf
+[Example code](https://github.com/beyond2013/ProgIntro/tree/master/src/sprintf.c)uses function sprintf to print formatted data into array s —an array of characters. The function uses the same conversion specifiers as printf (see Chapter 9 for a detailed discussion of formatting). The program inputs an int value and a double value to be formatted and printed to array s . Array s is the first argument of sprintf . [Note: If your system supports snprintf\_s, then use that in preference to sprintf . If your system doesn’t support snprintf\_s but does support snprintf , then use that in preference to sprintf.
+
+### Function sscanf
+[Example code](https://github.com/beyond2013/ProgIntro/tree/master/src/sscanf.c) uses function sscanf to read formatted data from character array s . The function uses the same conversion specifiers as scanf . The program reads an int and a double from array s and stores the values in x and y , respectively. The values of x and y are printed.
+Array s is the first argument of sscanf.
+
+## String-Manipulation Functions of the String-Handling Library
+The string-handling library ( <string.h> ) provides many useful functions for manipulat-
+ing string data (copying strings and concatenating strings), comparing strings, searching strings for characters and other strings, tokenizing strings (separating strings into logical pieces) and determining the length of strings. This section presents the string-manipulation functions of the string-handling library. The functions are summarized in table below:
+
+TABLE GOES HERE PAGE 350
+
+
+Every function—except for strncpy —appends the null character to its result.
