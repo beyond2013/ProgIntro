@@ -12,6 +12,15 @@ int main(void)
 
 	printf("\n integer value represented by character stored in variable grade is \t %d", grade);
 
+	grade = 66;
+
+	printf("\n new Character value of  grade variable is \t %c", grade);
+
+	grade++;
+
+
+	printf("\n Character value of  grade variable after increment \t %c", grade);
+
 	printf("\n\n");
 
 	printf("************   ****** *********************\n");
