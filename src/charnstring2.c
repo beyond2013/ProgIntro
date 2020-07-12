@@ -5,7 +5,7 @@ int main(void)
 {
 	char course[] = "Programming Fundamentals";
 
-	char course2[] = {'D', 'a', 't', 'a', 'b', 'a', 's', 'e', ' ', 'S', 'y', 's', 't', 'e' ,'m', 's', '\0'};
+	char course2[] = {'D', 'B', 'M', 'S', '\0'};
 
 	const char *instructor = "Imran Ali";
 
@@ -25,3 +25,5 @@ int main(void)
 
 	return 0;
 }
+
+
