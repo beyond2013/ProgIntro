@@ -8,8 +8,6 @@ Strong Password allow users to prevent attackers from guessing passwords or brut
 
 Your assignment is to complete the following program, by completing the function **strongpwd** which returns 1 if the password array passed to it contains a strong password, and returns 0 otherwise. 
 
-
-
 ```{.c .numberLines}
 #include<stdio.h>
 #include<ctype.h>
@@ -71,10 +69,13 @@ int strongpwd(char array[])
 }
 ```
 
+To save time download the above program from [github](https://github.com/beyond2013/ProgIntro/blob/master/assignments/strongpwd.c).
+
 Following are the rules for a valid strong password:
 
 1. It should be at least 8 characters in length, and
 2. It should contain a combination of alphabets [a-z], numerics[0-9], and a special symbol e.g. (\_, @, !)
+
 
 You may take help from the function length which I have already provided.
 
