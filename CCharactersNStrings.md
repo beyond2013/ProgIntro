@@ -2,7 +2,10 @@
 % Imran Ali
 % 2020-07-05
 
-**NOTE: Contents presented in this handout have been taken from the book C How to program by Deitel and Deitel (5th Edition)** 
+**NOTE:**
+
+1. Contents presented in this handout have been taken from the book C How to program by Deitel and Deitel (5th Edition)  
+2. Description of `strtol` function and related code in [listing-5] has been taken from [cplusplus.com](http://www.cplusplus.com/reference/cstdlib/strtol/) 
 
 # C Characters and Strings
 
@@ -67,9 +70,7 @@ are often manipulated as integers, because a character in C is a one-byte intege
 3. Function isalnum determines whether its argument is an uppercase letter, a lowercase letter, or a digit.
 4. Function isxdigit determines whether its argument is a hexadecimal digit (A-F, a-f, 0-9).
 
-[See Programming Example - 1. isdigit, isalpha, isalnum and isxdigit]
-
-[See Programming Example - 1. isdigit, isalpha, isalnum and isxdigit]: #charfunctions 
+[listing-1]: #charfunctions 
 
 ### Functions islower, isupper, tolower and toupper
 
@@ -78,9 +79,7 @@ are often manipulated as integers, because a character in C is a one-byte intege
 3. Function tolower converts an uppercase letter to a lowercase letter and returns the lowercase letter. If the argument is not an uppercase letter, tolower returns the argument unchanged.
 4. Function toupper converts a lowercase letter to an uppercase letter and returns the uppercase letter. If the argument is not a lowercase letter, toupper returns the argument unchanged. 
 
-[See Programming Example - 2. islower, isupper, tolower and toupper]
-
-[See Programming Example - 2. islower, isupper, tolower and toupper]: #charfunctions2 
+[listing-2]: #charfunctions2 
 
 
 ### Functions isspace, iscntrl, ispunct, isprint and isgraph
@@ -90,9 +89,8 @@ are often manipulated as integers, because a character in C is a one-byte intege
 4. Function isprint determines whether a character can be displayed on the screen (including the space character). 
 5. Function isgraph is the same as isprint , except that the space character is not included
 
-[See Programming Example - 3. isspace, iscntrl, ispunct, isprint, and isgraph]
 
-[See Programming Example - 3. isspace, iscntrl, ispunct, isprint, and isgraph]: #charfunctions3 
+[listing-3]: #charfunctions3 
 
 
 ## String Conversion Functions 
@@ -102,9 +100,9 @@ This section presents the string-conversion functions from the general utilities
 
 |Function prototype |  Function description |
 |---------|------------|
-|double strtod( const char \*nPtr, char \*\*endPtr );| Converts the string nPtr to double |
-|long strtol( const char \*nPtr, char \*\*endPtr, int base );|Converts the string nPtr to long |
-|unsigned long strtoul( const char \*nPtr, char \*\*endPtr, int base );|Converts the string nPtr to unsigned long |
+|`double strtod( const char \*nPtr, char \*\*endPtr );`| Converts the string nPtr to double |
+|`long int strtol(const char* str, char** endptr, int base );`|Converts the string str to long |
+|`unsigned long strtoul( const char \*nPtr, char \*\*endPtr, int base );`|Converts the string nPtr to unsigned long |
 
 The C standard also includes strtoll and strtoull for converting strings to long long int and unsigned long long respectively. Note the use of const to declare variable nPtr in the function headers (read from right to left as "nPtr is a pointer to a character constant"); const specifies that the argument value will not be modified.
 
@@ -114,26 +112,30 @@ Function strtod converts a sequence of characters representing a floating-point 
 The function receives two arguments—a string ( char \* ) and a pointer to a
 string ( char \*\* ). The string argument contains the character sequence to be converted to double any whitespace characters at the beginning of the string are ignored. The function uses the char \*\* argument to modify a char \* in the calling function ( stringPtr ) so that it points to the location of the first character after the converted portion of the string or to the entire string if no portion can be converted.
 
-[See Programming Example - 4. Function strtod]
-
-[See Programming Example - 4. Function strtod]: #strtod 
+[listing-4]: #strtod 
 
 ### Function strtol
+Parses the C-string str interpreting its content as an integral number of the specified base, which is returned as a long int value. If endptr is not a null pointer, the function also sets the value of endptr to point to the first character after the number.
 
-Function strtol converts to long int a sequence of characters representing an integer.The function returns 0 if it’s unable to convert any portion of its first argument to long int . The function receives three arguments—a string ( char * ), a pointer to a string and an integer. The string argument contains the character sequence to be converted to double any whitespace characters at the beginning of the string are ignored. The function uses the char \** argument to modify a char * in the calling function ( remainderPtr ) so that it points to the location of the first character after the converted portion of the string or to the entire string if no portion can be converted.
+The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes as many characters as possible that are valid following a syntax that depends on the base parameter, and interprets them as a numerical value. Finally, a pointer to the first character following the integer representation in str is stored in the object pointed by endptr.
 
-[See Programming Example - 5. Function strtol]
+If the value of base is zero, the syntax expected is similar to that of integer constants, which is formed by a succession of:
 
-[See Programming Example - 5. Function strtol]: #strtol 
+- An optional sign character (+ or -)
+- An optional prefix indicating octal or hexadecimal base ("0" or "0x"/"0X" respectively)
+- A sequence of decimal digits (if no base prefix was specified) or either octal or hexadecimal digits if a specific prefix is present
+
+If the base value is between 2 and 36, the format expected for the integral number is a succession of any of the valid digits and/or letters needed to represent integers of the specified radix (starting from '0' and up to 'z'/'Z' for radix 36). The sequence may optionally be preceded by a sign (either + or -) and, if base is 16, an optional "0x" or "0X" prefix.
+
+If the first sequence of non-whitespace characters in str is not a valid integral number as defined above, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.
+
+[listing-5]: #strtol 
 
 ### Function strtoul
 
 Function strtoul converts to unsigned long int a sequence of characters representing an unsigned long int value. The function works identically to function strtol. The statement `x = strtoul( string, &remainderPtr, 0 );`  of example code indicates that x is assigned the unsigned long int value converted from string . The second argument, &remainderPtr , is assigned the remainder of string after the conversion. The third argument, 0 , indicates that the value to be converted can be in octal, decimal or hexadecimal format
 
-
-[See Programming Example - 6. Function strtoul]
-
-[See Programming Example - 6. Function strtoul]: #strtoul 
+[listing-6]: #strtoul 
 
 ## Standard Input/Output Library Functions
 This section presents several functions from the standard input/output library ( <stdio.h> ) specifically for manipulating character and string data. Table below summarizes the character and string input/output functions of the standard input/output library.
@@ -148,7 +150,7 @@ This section presents several functions from the standard input/output library (
 |int sscanf( char *s, const char *format, ... );  |Equivalent to scanf , except the input is read from the array s rather than from the keyboard. Returns the number of items successfully read by the function, or EOF if an error occurs.|
 
 ### Functions fgets and putchar
-[Example code 7. fgets and putchar] uses functions fgets and putchar to read a line of text from the standard input (keyboard) and recursively output the characters of the line in reverse order. 
+[listing-7] uses functions fgets and putchar to read a line of text from the standard input (keyboard) and recursively output the characters of the line in reverse order. 
 Function fgets reads characters from the standard input into its first argument an array of chars until a newline or the end-of-file indicator is encountered, or until the maximum number of characters is read. 
 The maximum number of characters is one fewer than the value specified in fgets’s second argument. 
 The third argument specifies the stream from which to read characters—in this case, we use the standard input stream ( stdin ). A null character ( '\0' ) is appended to the array when reading terminates.
@@ -158,35 +160,26 @@ If the first character of the array received by reverse is the null character '\
 The order of the two statements in the else portion of the if statement causes reverse to walk to the terminating null character of the string before a character is printed.
 As the recursive calls are completed, the characters are output in reverse order.
 
-[See Programming Example - 7. Function fgets and putchar]
-
-[See Programming Example - 7. Function fgets and putchar]: #fgetsputs
+[listing-7]: #fgetsputs
 
 ### Function getchar
-[Example code 8. getchar] uses functions getchar and puts to read characters from the standard input into character array sentence and display the characters as a string. Function getchar reads a character from the standard input and returns the character as an integer. As you
+[listing-8] uses functions getchar and puts to read characters from the standard input into character array sentence and display the characters as a string. Function getchar reads a character from the standard input and returns the character as an integer. As you
 know, function puts takes a string as an argument and displays the string followed by a
 newline character. The program stops inputting characters when either 79 characters have
 been read or when getchar reads the newline character entered by the user to end the line of text. A null character is appended to array sentence so that the array may be treated as a string. Then, line 17 uses puts to display the string contained in sentence. 
 
-[See Programming Example - 8. Function getchar]
-
-[See Programming Example - 8. Function getchar]: #getchar
+[listing-8]: #getchar
 
 ### Function sprintf
-[Example code 9. sprintf] uses function sprintf to print formatted data into array s —an array of characters. The function uses the same conversion specifiers as printf. The program inputs an int value and a double value to be formatted and printed to array s . Array s is the first argument of sprintf . \[Note: If your system supports snprintf\_s, then use that in preference to sprintf . If your system doesn’t support snprintf\_s but does support snprintf , then use that in preference to sprintf.\]
+[listing-9] uses function sprintf to print formatted data into array s —an array of characters. The function uses the same conversion specifiers as printf. The program inputs an int value and a double value to be formatted and printed to array s . Array s is the first argument of sprintf . \[Note: If your system supports snprintf\_s, then use that in preference to sprintf . If your system doesn’t support snprintf\_s but does support snprintf , then use that in preference to sprintf.\]
 
-
-[See Programming Example - 9. Function sprintf]
-
-[See Programming Example - 9. Function sprintf]: #sprintf
+[listing-9]: #sprintf
 
 ### Function sscanf
-[Example code 10. sscanf] uses function sscanf to read formatted data from character array s . The function uses the same conversion specifiers as scanf . The program reads an int and a double from array s and stores the values in x and y , respectively. The values of x and y are printed.
+[listing-10] uses function sscanf to read formatted data from character array s . The function uses the same conversion specifiers as scanf . The program reads an int and a double from array s and stores the values in x and y , respectively. The values of x and y are printed.
 Array s is the first argument of sscanf.
 
-[See Programming Example - 10. Function sscanf]
-
-[See Programming Example - 10. Function sscanf]: #sscanf
+[listing-10]: #sscanf
 
 ## String-Manipulation Functions of the String-Handling Library
 The string-handling library ( <string.h> ) provides many useful functions for manipulating string data (copying strings and concatenating strings), comparing strings, searching strings for characters and other strings, tokenizing strings (separating strings into logical pieces) and determining the length of strings. This section presents the string-manipulation functions of the string-handling library. The functions are summarized in table below:
@@ -202,7 +195,9 @@ The string-handling library ( <string.h> ) provides many useful functions for ma
 
 Every function—except for strncpy —appends the null character to its result.
 
-Functions strncpy and strncat specify a parameter of type size\_t . Function strcpy copies its second argument (a string) into its first argument—a character array that you must ensure is large enough to store the string and its terminating null character, which is also copied.
+Functions strncpy and strncat specify a parameter of type size\_t, which is a type defined by the C standard as the integral type of the value returned by operator `sizeof`. 
+
+Function strcpy copies its second argument (a string) into its first argument—a character array that you must ensure is large enough to store the string and its terminating null character, which is also copied.
 
 Function strncpy is equivalent to strcpy , except that strncpy specifies the number of characters to be copied from the string into the array.
  
@@ -211,18 +206,22 @@ Function strncpy does not necessarily copy the terminating null character of its
 For example, if "test" is the second argument, a terminating null character is written only if the third argument to strncpy is at least 5 (four characters in "test" plus a terminating null character). If the third argument is larger than 5 , null characters are appended to the array until the total number of characters specified by the third argument are written.
 
 ### Functions strcpy and strncpy
-[Example code] uses strcpy to copy the entire string in array x into array y and uses strncpy to copy the first 14 characters of array x into array z . A null character ( '\0' ) is appended to array z , because the call to strncpy in the program does not write a terminating null character (the third argument is less than the string length of the second argument). 
+[listing-11] uses strcpy to copy the entire string in array x into array y and uses strncpy to copy the first 14 characters of array x into array z . A null character ( '\0' ) is appended to array z , because the call to strncpy in the program does not write a terminating null character (the third argument is less than the string length of the second argument). 
 
-
-[See Programming Example - 11. Functions strcpy strncpy]
-
-[See Programming Example - 11. Functions strcpy strncpy]: #strcpystrncpy
+[listing-11]: #strcpystrncpy
 
 ## Comparison Functions of the String-Handling Library
 
 This section presents the string-handling library’s string-comparison functions, strcmp and strncmp . Table below contains their prototypes and a brief description of each function.
 
-[Example code] uses strcpy to copy the entire string in array x into array y and uses strncpy compares three strings using strcmp and strncmp . Function strcmp compares its first string argument with its second string argument, character by character. The function returns 0 if the strings are equal, a negative value if the first string is less than the second string and a positive value if the first string is greater than the second string. Function strncmp is equivalent to strcmp , except that strncmp compares up to a specified number of characters. Function strncmp does not compare characters following a null character in a string. The program prints the integer value returned by each function call.
+Function prototype| Function description
+------------------|-----------------------
+`int strcmp( const char *s1, const char *s2 );`| Compares the string s1 with the string s2 . The function returns 0 , less than 0 or greater than 0 if s1 is equal to, less than or greater than s2 , respectively.
+`int strncmp( const char *s1, const char *s2, size_t n );`| Compares up to n characters of the string s1 with the string s2 . The function returns 0 , less than 0 or greater than 0 if s1 is equal to, less than or greater than s2 , respectively.
+
+[listing-19] compares three strings using strcmp and strncmp. Function strcmp compares its first string argument with its second string argument, character by character. The function returns 0 if the strings are equal, a negative value if the first string is less than the second string and a positive value if the first string is greater than the second string. Function strncmp is equivalent to strcmp , except that strncmp compares up to a specified number of characters. Function strncmp does not compare characters following a null character in a string. The program prints the integer value returned by each function call.
+
+[listing-19]: #strcmp
 
 To understand just what it means for one string to be "greater than" or "less than"
 another, consider the process of alphabetizing a series of last names. The reader would, no doubt, place "Jones" before "Smith," because the first letter of "Jones" comes before the first letter of "Smith" in the alphabet. But the alphabet is more than just a list of 26 letters—it’s an ordered list of characters. Each letter occurs in a specific position within the list. "Z" is more than merely a letter of the alphabet; "Z" is specifically the 26th letter of the alphabet.
@@ -249,48 +248,34 @@ Locates the first occurrence in string s1 of string s2 . If the string is found,
 A sequence of calls to strtok breaks string s1 into tokens—logical pieces such as words in a line of text—separated by characters contained in string s2 . The first call contains s1 as the first argument, and subsequent calls to continue tokenizing the same string contain NULL as the first argument. A pointer to the current token is returned by each call. If there are no more tokens when the function is called, NULL is returned.
 
 ### Function strchr
-Function strchr searches for the first occurrence of a character in a string. If the character is found, strchr returns a pointer to the character in the string; otherwise, strchr returns NULL . [Example code] searches for the first occurrences of 'a' and 'z' in "This is a test" .
+Function strchr searches for the first occurrence of a character in a string. If the character is found, strchr returns a pointer to the character in the string; otherwise, strchr returns NULL . [Listing-12] searches for the first occurrences of 'a' and 'z' in "This is a test" .
 
-
-[See Programming Example - 12. Functions strchr]
-
-[See Programming Example - 12. Functions strchr]: #strchr
+[Listing-12]: #strchr
 
 ### Function strcspn
-Function strcspn [Example code] determines the length of the initial part of the string in its first argument that does not contain any characters from the string in its second argument. The function returns the length of the segment.
+Function strcspn [listing-13] determines the length of the initial part of the string in its first argument that does not contain any characters from the string in its second argument. The function returns the length of the segment.
 
-[See Programming Example - 13. Functions strcspn]
-
-[See Programming Example - 13. Functions strcspn]: #strcspn
+[listing-13]: #strcspn
 
 ### Function strpbrk
-Function strpbrk searches its first string argument for the first occurrence of any character in its second string argument. If a character from the second argument is found, strpbrk returns a pointer to the character in the first argument; otherwise, strpbrk returns NULL . [Example code] shows a program that locates the first occurrence in string1 of any character from string2 .
+Function strpbrk searches its first string argument for the first occurrence of any character in its second string argument. If a character from the second argument is found, strpbrk returns a pointer to the character in the first argument; otherwise, strpbrk returns NULL . [listing-14] shows a program that locates the first occurrence in string1 of any character from string2 .
 
-[See Programming Example - 14. Functions strpbrk]
-
-[See Programming Example - 14. Functions strpbrk]: #strpbrk
+[listing-14]: #strpbrk
 
 ### Function strrchr
-Function strrchr searches for the last occurrence of the specified character in a string. If the character is found, strrchr returns a pointer to the character in the string; otherwise, strrchr returns NULL . [Example code] shows a program that searches for the last occurrence of the character 'z' in the string "A zoo has many animals including zebras" . 
+Function strrchr searches for the last occurrence of the specified character in a string. If the character is found, strrchr returns a pointer to the character in the string; otherwise, strrchr returns NULL . [listing-15] shows a program that searches for the last occurrence of the character 'z' in the string "A zoo has many animals including zebras" . 
 
-[See Programming Example - 15. Functions strrchr]
-
-[See Programming Example - 15. Functions strrchr]: #strrchr
+[listing-15]: #strrchr
 
 ### Function strspn
-Function strspn   [Example code] determines the length of the initial part of the string in its first argument that contains only characters from the string in its second argument. The function returns the length of the segment.
+Function strspn   [listing-16] determines the length of the initial part of the string in its first argument that contains only characters from the string in its second argument. The function returns the length of the segment.
 
-[See Programming Example - 16. Functions strspn]
-
-[See Programming Example - 16. Functions strspn]: #strspn
+[listing-16]: #strspn
 
 ### Function strstr
-Function strstr searches for the first occurrence of its second string argument in its first string argument. If the second string is found in the first string, a pointer to the location of the string in the first argument is returned.  [Example code] uses strstr to find the string "def" in the string "abcdefabcdef" .
+Function strstr searches for the first occurrence of its second string argument in its first string argument. If the second string is found in the first string, a pointer to the location of the string in the first argument is returned.  [listing-17] uses strstr to find the string "def" in the string "abcdefabcdef" .
 
-
-[See Programming Example - 17. Functions strstr]
-
-[See Programming Example - 17. Functions strstr]: #strstr
+[listing-17]: #strstr
 
 ### Function strtok
 
@@ -299,7 +284,7 @@ For example, in a line of text, each word can be considered a token, and the spa
 
 Multiple calls to strtok are required to tokenize a string i.e., break it into tokens (assuming that the string contains more than one token). 
 
-In example code the first call to strtok contains two arguments:   
+In [listing-18] the first call to strtok contains two arguments:   
 1. a string to be tokenized, and 
 2. a string containing characters that separate the tokens. 
 
@@ -318,14 +303,11 @@ The NULL argument indicates that the call to strtok should continue tokenizing f
 
 If no tokens remain when strtok is called, strtok returns NULL . You can change the delimiter string in each new call to strtok .
 
-[Example code] uses strtok to tokenize the string "This is a sentence with 7 tokens" . Each token is printed separately. 
+[listing-18] uses strtok to tokenize the string "This is a sentence with 7 tokens" . Each token is printed separately. 
 
 Function strtok modifies the input string by placing '\0' at the end of each token; therefore, a copy of the string should be made if the string will be used again in the program after the calls to strtok. 
 
-
-[See Programming Example - 18. Functions strtok]
-
-[See Programming Example - 18. Functions strtok]: #strtok
+[listing-18]: #strtok
 
 ## Programming Examples 
 
@@ -478,17 +460,16 @@ int main( void )
 #include <stdlib.h>
 int main( void )
 {
-	const char *string = "-1234567abc"; // initialize string pointer
-	char *remainderPtr; // create char pointer
-	long x; // variable to hold converted sequence
-	x = strtol( string, &remainderPtr, 0 );
-	printf( "%s\"%s\"\n%s%ld\n%s\"%s\"\n%s%ld\n",
-			"The original string is ", string,
-			"The converted value is ", x,
-			"The remainder of the original string is ",
-			remainderPtr,
-			"The converted value plus 567 is ", x + 567 );
-	return 0;
+  char szNumbers[] = "2001 60c0c0 -1101110100110100100000 0x6fffff";
+  char * pEnd;
+  long int li1, li2, li3, li4;
+  li1 = strtol (szNumbers,&pEnd,10);
+  li2 = strtol (pEnd,&pEnd,16);
+  li3 = strtol (pEnd,&pEnd,2);
+  li4 = strtol (pEnd,NULL,0);
+  printf ("The decimal equivalents are: %ld, %ld, %ld and %ld.\n", li1, li2, li3, li4);
+  return 0;
+
 }
 
 ```
@@ -545,7 +526,7 @@ void reverse( const char * const sPtr )
 ```
 8. Function  getchar
 
-```{#putchar .c .numberLines startFrom="1" }
+```{#getchar .c .numberLines startFrom="1" }
 #include <stdio.h>
 #define SIZE 80
 int main( void )
@@ -775,4 +756,26 @@ int main( void )
 	} // end while
 	return 0;
 } // end main
+```
+
+19. Function strcmp and strncmp
+```{#strcmp .c .numberLines startFrom="1" }
+#include <stdio.h>
+#include <string.h>
+int main( void )
+{
+	const char *s1 = "Happy New Year"; // initialize char pointer
+	const char *s2 = "Happy New Year"; // initialize char pointer
+	const char *s3 = "Happy Holidays"; // initialize char pointer
+	printf("%s%s\n%s%s\n%s%s\n\n%s%2d\n%s%2d\n%s%2d\n\n",
+			"s1 = ", s1, "s2 = ", s2, "s3 = ", s3,
+			"strcmp(s1, s2) = ", strcmp( s1, s2 ) ,
+			"strcmp(s1, s3) = ", strcmp( s1, s3 ) ,
+			"strcmp(s3, s1) = ", strcmp( s3, s1 ) );
+	printf("%s%2d\n%s%2d\n%s%2d\n",
+			"strncmp(s1, s3, 6) = ", strncmp( s1, s3, 6 ) ,
+			"strncmp(s1, s3, 7) = ", strncmp( s1, s3, 7 ) ,
+			"strncmp(s3, s1, 7) = ", strncmp( s3, s1, 7 ) );
+	return 0;
+} 
 ```

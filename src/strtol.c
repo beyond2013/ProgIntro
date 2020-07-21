@@ -2,16 +2,14 @@
 #include <stdlib.h>
 int main( void )
 {
-	const char *string = "-1234567abc"; // initialize string pointer
-	char *remainderPtr; // create char pointer
-	long x; // variable to hold converted sequence
-	x = strtol( string, &remainderPtr, 0 );
-	printf( "%s\"%s\"\n%s%ld\n%s\"%s\"\n%s%ld\n",
-			"The original string is ", string,
-			"The converted value is ", x,
-			"The remainder of the original string is ",
-			remainderPtr,
-			"The converted value plus 567 is ", x + 567 );
-	return 0;
+char szNumbers[] = "2001 60c0c0 -1101110100110100100000 0x6fffff";
+  char * pEnd;
+  long int li1, li2, li3, li4;
+  li1 = strtol (szNumbers,&pEnd,10);
+  li2 = strtol (pEnd,&pEnd,16);
+  li3 = strtol (pEnd,&pEnd,2);
+  li4 = strtol (pEnd,NULL,0);
+  printf ("The decimal equivalents are: %ld, %ld, %ld and %ld.\n", li1, li2, li3, li4);
+  return 0;
 }
 
