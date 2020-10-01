@@ -12,7 +12,7 @@ int main()
     if (fp == NULL) 
       return 0; 
   
-    char string[] = "\n Department of Computer Science \n & Information Technology \n"; 
+    char string[] = "Department of Computer Science & Information Technology "; 
   
     for (i = 0; string[i]!='\0'; i++) 
   

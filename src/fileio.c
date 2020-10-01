@@ -1,28 +1,64 @@
-#include<stdio.h>
-int main(void)
+#include <stdio.h>
+
+int chkArguments(char *email, char *blacklist);
+int chkSpam(char *email, char *blacklist);
+int main(int argc, char *argv[])
 {
- int account;
- char name[30];
- double balance;
+  int chkArg = 0;
+  int chkMail = 0;
+  switch(argc)
+	{
+		case 1:
+		case 2:
+			printf("\n This programs expects two arguments \n ");
+		break;
 
- FILE *cfPtr;
+		case 3:
+		printf("\n arguments supplied %s and %s \n", argv[1], argv[2]);
+		chkArg = chkArguments(argv[1], argv[2]);
+		if(chkArg == 1)
+		{
+			printf("\n Ready to detect spam \n");
+			chkMail= chkSpam(argv[1], argv[2]);
+			if(chkMail==0)
+			{
+			  printf("\n email is a spam");
+			}
+			else
+			{
+			 printf("\n email is not a spam");
+			}
+		}
 
- if((cfPtr = fopen("clients.dat", "w")) == NULL)
+		break;
+	}
+
+	return 0;
+}
+
+int chkArguments(char *email, char *blacklist)
+{
+ int returnValue =1;
+ FILE *fp, *fp2;
+ fp = fopen(blacklist, "r");
+ fp2 = fopen(email, "r");
+ if( fp == NULL || fp2 == NULL )
  {
-	 printf("File could not be openned\n");
+	 printf("\n Cannot open one of the files %s %s \n", blacklist, email);
+	 returnValue =0;
+	 if(fp != NULL) fclose(fp);
+	 if(fp2 != NULL) fclose(fp2);
  }
- else
- {
-	 printf("Enter the account, name, and balance \n");
-	 printf("Enter EOF to end input \n");
-	 scanf("%d%s%lf", &account, name, &balance);
-	 while( !feof(stdin))
-	 {
-		 fprintf(cfPtr, "%d %s %.2f\n", account, name, balance);
-		 scanf("%d%s%lf", &account, name, &balance);
-	 }
-	 fclose(cfPtr);
- }
- return 0;
+ return returnValue;
+}
+
+int chkSpam(char *email, char *blacklist)
+{
+
+
+//
+//	place your logic to check spam here
+//
+  return 0;
 }
 

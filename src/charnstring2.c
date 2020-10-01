@@ -3,27 +3,11 @@
 
 int main(void)
 {
-	char course[] = "Programming Fundamentals";
+	//int grade=65;
+	char grade;
+	 for(grade=1000; grade < 2000; grade++)
+	{
+		printf("\n value of grade is %c, int equivalent %d", grade, grade); 
+	}
 
-	char course2[] = {'D', 'B', 'M', 'S', '\0'};
-
-	const char *instructor = "Imran Ali";
-
-	printf("\n************   OUTPUT *********************");
-
-	printf("\n\n");
-
-	printf("\n value stored in course character Array %s ", course);
-
-	printf("\n value stored in course2 character Array %s ", course2);
-
-	printf("\n value stored in pointer variable %s ", instructor);
-
-	printf("\n\n");
-
-	printf("************   ****** *********************\n");
-
-	return 0;
 }
-
-
