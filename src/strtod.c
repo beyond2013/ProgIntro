@@ -3,7 +3,7 @@
 int main( void )
 {
 	// initialize string pointer
-	const char *string = "51.2% are admitted"; // initialize string
+	const char *string = "admitted are 51.2"; // initialize string
 	double d; // variable to hold converted sequence
 	char *stringPtr; // create char pointer
 	d = strtod( string, &stringPtr );
