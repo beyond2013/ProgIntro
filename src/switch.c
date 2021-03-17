@@ -4,54 +4,42 @@ int main()
 {
    int num1, num2, result=0;
    int operation;  // to store one of + , - , * or /
-   int loop;
-   char op;
 
-   puts("New program");
-do{
    printf("\n Enter a number\t");
    scanf("%d", &num1);
    printf("\n Enter another number\t");
    scanf("%d", &num2);
 
-   printf("\n Enter operator [1: +, 2: -, 3: *, 4:/]");
-   scanf(" %c", &op);
+   printf("\n Enter operator [1: +, 2: -, 3: *, 4:/]\t");
+   scanf("%d", &operation);
 
-   switch(op)
+   switch(operation)
    {
 
-        //case 2:
-        case '-':
+        case 2:
             result = num1 - num2;
             printf("\n The result is %d", result);
         break;
 
-        //case 1:
-        case '+':
+        case 1:
             result = num1 + num2;
             printf("\n The result is %d", result);
         break;
 
-        //case 3:
-        case '*':
+        case 3:
             result = num1 * num2;
             printf("\n The result is %d", result);
         break;
 
-        //case 4:
-        case '/':
+        case 4:
             result = num1 / num2;
             printf("\n The result is %d", result);
         break;
 
         default:
-            printf("\n %c not in menu",op);
+            printf("\n %d not in menu",operation);
    }
 
-   printf("\n Press 1 to continue");
-   scanf("%d", &loop);
-}
-while(loop == 1);
-   return 0;
-}
 
+   return 0;
+   }
