@@ -4,20 +4,20 @@ You will be writing step by step statements by following the instructions listed
 
 Formulas for conversion are as under:
 
-1. $F = (C * 9 / 5) + 32$
-2. $C = (F - 32) * 5 / 9$
+1. F = (C * 9 / 5) + 32
+2. C = (F - 32) * 5 / 9
 
 ## Sample interaction of the desired program
 
 
 Temperature Conversion Menu
 ===========================
-1. Fahrenheit
-2. Celsius
-Convert from 1
-Convert to   2
-temperature  32
-Converting 32 Fahrenheit to Celsius results in 0
+1. Fahrenheit  
+2. Celsius  
+Convert from **1**  
+Convert to   **2**  
+temperature  **32** 
+Converting **32** Fahrenheit to Celsius results in **0**  
 
 
 ## Instructions
@@ -45,7 +45,7 @@ Extend your program and include 3rd Option **Kelvin** in the **temperature conve
 
 Formulas for conversion are as under:
 
-1. $K = C + 273.15$
-2. $K = (F - 32) * 5 / 9 + 273.15$
+1. K = C + 273.15
+2. K = (F - 32) * 5 / 9 + 273.15
 
 Modify the above formulas to so that you may convert from **Celsius and Fahrenheit to Kelvin**
