@@ -16,7 +16,7 @@ Temperature Conversion Menu
 2. Celsius  
 Convert from **1**  
 Convert to   **2**  
-temperature  **32** 
+temperature  **32**  
 Converting **32** Fahrenheit to Celsius results in **0**  
 
 
