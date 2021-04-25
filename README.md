@@ -10,7 +10,7 @@
 
 - [Introduction to problem solving](./problemSolving.md)  
 - [a brief review of Von-Neumann architecture](./von-neumann.md)
-- Introduction to programming
+- [Introduction to programming](./intro2programming.md)
 - role of compiler and linker
 - introduction to algorithms
 - basic data types and variables
