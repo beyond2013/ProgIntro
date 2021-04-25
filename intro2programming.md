@@ -30,16 +30,16 @@ Few basic but important things to keep in mind:
 
 - when we write programs in c we give names to variables and functions, following is a **list of words that cannot be used as names** because they already reserved by c.
 
-```
-auto	break	case	char
-const	continue	default	do
-double	else	enum	extern
-float	for	goto	if
-int	long	register	return
-short	signed	sizeof	static
-struct	switch	typedef	union
-unsigned	void	volatile	while
-```
+|==============================================|
+|auto	     | break	   |  case	    | char     |
+| const	   | continue	 |  default	  | do       |
+| double	 | else	     |  enum	    | extern   |
+| float	   | for	     |  goto	    | if       |
+| int	     | long	     |  register	| return   |
+| short	   | signed	   |  sizeof	  | static   |
+| struct	 | switch	   |  typedef	  | union    | 
+| unsigned |	void	   |  volatile	| while    |
+|==============================================|
 
 
 
