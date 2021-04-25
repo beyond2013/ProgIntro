@@ -23,10 +23,10 @@
 - introduction to modular programming
 - function definition and calling
 - stack rolling and unrolling
-- string and string operations,
-- pointers/references
+- [string and string operations](./gfmCCharNString.md)
+- [pointers/references](./pointers.md)
 - static and dynamic memory allocation
-- File I/O operations
+- [File I/O operations](./fileio.md)
 
 
 ## Reference Material
