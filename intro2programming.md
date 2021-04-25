@@ -41,7 +41,19 @@ Few basic but important things to keep in mind:
 | struct	 | switch	   |  typedef	  | union    |
 | unsigned |	void	   |  volatile	| while    |
 
-  
+### Basic use of keyword-
+1. int, float, char, double, long, short – These are the data types. Each data type has a different meaning.
+2. if, else, switch, case, default – These are the types of control statements.
+3. for, while, do – These are the types of loops.
+4. return –  used for returning a value.
+5. void – One of the return type.
+6. auto, extern, const, extern, register, signed, unsigned – These are used to defines variables.
+7. break, continue – This keyword is used with a loop.
+8. goto – Used for redirecting the flow of execution.
+9. enum – It is a data type which contains set of constants.
+10. sizeof – sizeof keyword is used to know the size.
+11.	struct, typeof –  keywords used in the structure.
+12. union – It is a collation of variables.
 
 
 
