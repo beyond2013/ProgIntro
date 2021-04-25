@@ -1,3 +1,5 @@
+**Note: images and contents presented here have been taken from wikipedia.org**
+
 # John Von-Neumann 
 
 - Before we talk about the architecture let us know a bit about Von-Neumann.
