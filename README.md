@@ -12,7 +12,7 @@
 - [a brief review of Von-Neumann architecture](./von-neumann.md)
 - [Introduction to programming](./intro2programming.md)
 - [role of compiler and linker](./source2exe.md)
-- [introduction to algorithms](./intro2Aglo.md)
+- [introduction to algorithms](./intro2Algo.md)
 - basic data types and variables
 - input/output constructs
 - arithmetic, comparison and logical operators
