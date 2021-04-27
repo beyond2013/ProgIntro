@@ -13,7 +13,7 @@
 - [Introduction to programming](./intro2programming.md)
 - [role of compiler and linker](./source2exe.md)
 - [introduction to algorithms](./intro2Algo.md)
-- basic data types and variables
+- [basic data types and variables](./dataTypesVariables.md)
 - input/output constructs
 - arithmetic, comparison and logical operators
 - conditional statements and execution flow for conditional statements
