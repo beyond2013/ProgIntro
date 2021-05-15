@@ -8,7 +8,7 @@ Following suggestions can help you in learning the science and art of programmin
 
 3. Although you can type your program online by visiting online c compilers using your smartphone, I would advise you not to do so. 
 
-4. Install the [recommended software](https://www.codeblocks.org/downloads/binaries/#imagesoswindows48pnglogo-microsoft-windows) on your own computer.
+4. Install the [recommended software](https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe) on your own computer.
 
 5. Practice is the key, which means repeat, many students take pictures of the white board instead of taking notes, this is the modern trend but believe me when I say it will not help you in learning.
 
