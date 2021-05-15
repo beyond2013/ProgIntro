@@ -1,1 +1,0 @@
-write a c program that can print first eight numbers of fibanocci sequence, you have to use loop.
