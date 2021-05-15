@@ -26,11 +26,13 @@ int main ()
 
 	struct person p1 = {1, "Imran", "Ali"}; 
 	struct person p2 = {2, "Abdul", "Basit"}; 
-	
+  /* printf("\n fwrite before call = %ld", fwrite); */	
 	// write struct to file 
 	fwrite (&p1, sizeof(struct person), 1, outfile); 
+  /* printf("\n fwrite after 1st call = %ld", fwrite); */	
 	fwrite (&p2, sizeof(struct person), 1, outfile); 
-	
+  /* printf("\n fwrite after 2nd call = %ld", fwrite); */	
+
 	if(fwrite != 0) 
 		printf("contents written to file successfully !\n"); 
 	else
