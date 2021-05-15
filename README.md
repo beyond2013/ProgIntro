@@ -6,14 +6,14 @@
 
 ## Course Content
 
-- [Introduction to problem solving](./problemSolving.md)  
-- [a brief review of Von-Neumann architecture](./von-neumann.md)
-- [Introduction to programming](./intro2programming.md)
-- [role of compiler and linker](./source2exe.md)
-- [introduction to algorithms](./intro2Algo.md)
-- [basic data types and variables](./dataTypesVariables.md)
-- [input/output constructs](./ioconstructs.md)
-- [arithmetic, comparison and logical operators](./operators.md)
+- [Introduction to problem solving](markdown/problemSolving.md)  
+- [a brief review of Von-Neumann architecture](markdown/von-neumann.md)
+- [Introduction to programming](markdown/intro2programming.md)
+- [role of compiler and linker](markdown/source2exe.md)
+- [introduction to algorithms](markdown/intro2Algo.md)
+- [basic data types and variables](markdown/dataTypesVariables.md)
+- [input/output constructs](markdown/ioconstructs.md)
+- [arithmetic, comparison and logical operators](markdown/operators.md)
 - conditional statements and execution flow for conditional statements
 - repetitive statements and execution flow for repetitive statements
 - lists and their memory organization
@@ -21,10 +21,10 @@
 - introduction to modular programming
 - function definition and calling
 - stack rolling and unrolling
-- [string and string operations](./gfmCCharNString.md)
-- [pointers/references](./pointers.md)
+- [string and string operations](markdown/gfmCCharNString.md)
+- [pointers/references](markdown/pointers.md)
 - static and dynamic memory allocation
-- [File I/O operations](./fileio.md)
+- [File I/O operations](markdown/fileio.md)
 
 
 ## Reference Material
