@@ -14,7 +14,7 @@
 - [role of compiler and linker](./source2exe.md)
 - [introduction to algorithms](./intro2Algo.md)
 - [basic data types and variables](./dataTypesVariables.md)
-- input/output constructs
+- [input/output constructs](./ioconstructs.md)
 - arithmetic, comparison and logical operators
 - conditional statements and execution flow for conditional statements
 - repetitive statements and execution flow for repetitive statements
