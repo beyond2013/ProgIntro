@@ -4,8 +4,6 @@
 
 ### Credit Hours : 4 (3,1)
 
-
-
 ## Course Content
 
 - [Introduction to problem solving](./problemSolving.md)  
@@ -44,4 +42,3 @@
 - [Introduction to Computer Science and Programming in Python](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/)
 - [SourceForge Download link Code blocks IDE for windows](https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe)
 
-- 
