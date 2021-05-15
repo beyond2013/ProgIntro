@@ -7,7 +7,7 @@
 - He made major contributions to many fields, including mathematics, physics, economics, computing, and statistics.
 - When he was six years old he could divide two 8 digit numbers in his head!!! 
 
-![John von Nuemann](./figs/JohnvonNeumann.gif "John von Neumann")
+![John von Nuemann](figs/JohnvonNeumann.gif "John von Neumann")
 
 
 ## Von-Neumann Architecture
@@ -21,7 +21,7 @@
 4. External mass storage
 5. Input and output mechanisms.
 
-![Von-Neumann Architecture](./figs/Von_Neumann_Architecture.png "Von-Neumann Architecture")
+![Von-Neumann Architecture](figs/Von_Neumann_Architecture.png "Von-Neumann Architecture")
 
 - This architecture refers to any stored-program computer in which an instruction fetch and a data operation cannot occur at the same time because they share a common bus.
 
@@ -30,6 +30,6 @@
 
 - Harvard architecture has one dedicated set of address and data buses for reading and writing to memory and another set of address and data buses to fetch instructions
 
-![Harvard architecture](./figs/Harvard_architecture.png "Harvard architecture")
+![Harvard architecture](figs/Harvard_architecture.png "Harvard architecture")
 
 
