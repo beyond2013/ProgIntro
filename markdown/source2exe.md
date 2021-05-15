@@ -23,5 +23,5 @@ CPU takes each instruction and executes it.
 
 ![Typical C Development environment](../figs/cprogrphases.png "Typical c development environment")
 
-**Note: the image above has been taken from the book C how to program by deitel and deitel 5th edition **
+**Note: the image above has been taken from the book C how to program by deitel and deitel 5th edition**
 
