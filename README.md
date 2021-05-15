@@ -15,7 +15,7 @@
 - [introduction to algorithms](./intro2Algo.md)
 - [basic data types and variables](./dataTypesVariables.md)
 - [input/output constructs](./ioconstructs.md)
-- arithmetic, comparison and logical operators
+- [arithmetic, comparison and logical operators](./operators.md)
 - conditional statements and execution flow for conditional statements
 - repetitive statements and execution flow for repetitive statements
 - lists and their memory organization
