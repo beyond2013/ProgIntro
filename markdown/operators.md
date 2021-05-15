@@ -23,7 +23,7 @@
 - e.g. `A - B = 17` but `B - A = -17`similarly `/` and `%` will give different values when the position of `A` and `B` is changed.
 - operators which operate on two operands are known as `binary operators`
 
-[link to c program on arithmetic operators](src/arithmeticOperators.c)
+[link to c program on arithmetic operators](../src/arithmeticOperators.c)
 
 ## Arithmetic Assignment Operators
 
@@ -31,7 +31,7 @@
 - e.g. if `a=4` then `a = a + 2` (which means add 2 to `a` and assign the result to `a`) may be written as `a+=2`, note that `a` is not repeated.
 - `+=, -=, *=, /=` and `%=` are all arithmetic assignment operators
 
-[link to c program on arithmetic assignment operators](src/arithmeticAssignmentOperators.c)
+[link to c program on arithmetic assignment operators](../src/arithmeticAssignmentOperators.c)
 
 
 ## Relational Operators
@@ -46,7 +46,7 @@
 |    <=    | Checks if the value of left operand is less than or equal to the value of right operand. If yes, then the condition becomes true.    | (A <= B) is true.     |
 
 
-[link to c program on relational operators](src/relationalOperators.c)
+[link to c program on relational operators](../src/relationalOperators.c)
 
 ## Logical Operators
 
