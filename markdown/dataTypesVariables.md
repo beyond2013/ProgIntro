@@ -34,4 +34,4 @@ Following table displays basic data types available in c, and the amount of memo
 | float | 4 |
 | double | 8 |
 
-- the above table may be verified by executing [this program](./src/sizeof.c) which uses `sizeof` operator 
+- the above table may be verified by executing [this program](../src/sizeof.c) which uses `sizeof` operator 
