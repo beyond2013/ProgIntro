@@ -27,7 +27,7 @@ is called an algorithm.
 - When drawing a flowchart that represents a complete algorithm, a rounded rectangle symbol containing the word **Begin** is the first symbol used in the flowchart; 
 - a rounded rectangle symbol containing the word **End** is the last symbol used. 
 
-![flow chart](./figs/flowchart.png "Flow chart")
+![flow chart](../figs/flowchart.png "Flow chart")
 
 - When drawing only a portion of an algorithm as in Figure above, the rounded rectangle symbols are omitted in favor of using small circle symbols, also called connector symbols.
 - Perhaps the most important flowcharting symbol is the diamond symbol, also called the decision symbol, which indicates that a decision is to be made.
