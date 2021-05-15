@@ -2,3 +2,9 @@
 *.swp
 src/bin/
 submissions/
+*.ods
+*.odt
+*.zip
+*.txt
+*.dat
+*.docx
