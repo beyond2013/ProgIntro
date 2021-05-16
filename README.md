@@ -14,16 +14,16 @@
 - [basic data types and variables](markdown/dataTypesVariables.md)
 - [input/output constructs](markdown/ioconstructs.md)
 - [arithmetic, comparison and logical operators](markdown/operators.md)
-- conditional statements and execution flow for conditional statements
-- repetitive statements and execution flow for repetitive statements
-- lists and their memory organization
-- multi-dimensional lists
-- introduction to modular programming
-- function definition and calling
-- stack rolling and unrolling
+- [conditional statements and execution flow for conditional statements](markdown/conditionalStatements.md)
+- [repetitive statements and execution flow for repetitive statements](markdown/repetitiveStatements.md)
+- [lists and their memory organization](markdown/lists.md)
+- [multi-dimensional lists](markdown/multiDlists.md)
+- [introduction to modular programming](markdown/intro2ModProg.md)
+- [function definition and calling](markdown/functions.md)
+- [stack rolling and unrolling](markdown/stack.md)
 - [string and string operations](markdown/gfmCCharNString.md)
 - [pointers/references](markdown/pointers.md)
-- static and dynamic memory allocation
+- [static and dynamic memory allocation](memory.md)
 - [File I/O operations](markdown/fileio.md)
 
 
