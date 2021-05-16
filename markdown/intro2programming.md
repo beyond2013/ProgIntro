@@ -41,6 +41,12 @@ Few basic but important things to keep in mind:
 | struct	 | switch	   |  typedef	  | union    |
 | unsigned |	void	   |  volatile	| while    |
 
+- Keywords added in C99 standard
+`_Bool _Complex _Imaginary inline restrict`
+
+- Keywords added in C11 draft standard
+`_Alignas _Alignof _Atomic _Generic _Noreturn _Static_assert _Thread_local`
+
 ### Basic use of keyword-
 1. int, float, char, double, long, short – These are the data types. Each data type has a different meaning.
 2. if, else, switch, case, default – These are the types of control statements.
