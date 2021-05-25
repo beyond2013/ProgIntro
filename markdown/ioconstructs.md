@@ -1,10 +1,13 @@
 # Input Output Constructs
 
 - For displaying data/information on the standard output (i.e. display screen) `printf()` function is used. 
-- For taking input from standard input (i.e. keyboard) `scanf()` function is used.
+- [See this program on how to use printf](src/using_printf.c) is a program that shows how to `printf()` is used.
 
+- For taking input from standard input (i.e. keyboard) `scanf()` function is used.
+- [See this program on how to use scanf](src/using_scanf.c) is a program that shows how to `scanf()` is used.
 - both `printf()` and `scanf()` functions are provided by the **standard input/output header** `<stdio.h>`
 - `printf()` function usually involves using **escape sequences** and **format specifiers**
+
 
 ## Escape Sequences
 
@@ -23,6 +26,7 @@ Following table lists escape sequences and their description:
 | \n              | new line        | \'              | single quote | \0              | Null               |
 | \r              | carriage return | \"              | double quote |                 |                    |
 
+- [See this program to understand how to use escape sequences](src/escape_sequence.c)
 
 ## Format specifiers
 
@@ -43,6 +47,6 @@ Following table lists the format specifiers and their description:
 | %u               | Unsigned Integer Format Specifier |
 | %ld              | Long Int Format Specifier         |
 
-
+- [See this program to understand how to use format specifiers](src/format_specifiers.c)
 
 
