@@ -50,6 +50,7 @@ else
 - the 1st operand is the condition
 - 2nd operand is the value if the condition is true
 - 3rd operand is the value if the condition is false
+- e.g. `2 < 3 ? "two is less than three" : "two is not less than three"`
 - [C program using ternary operator](../src/ternaryoperator.c)
 
 
