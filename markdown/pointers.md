@@ -1,7 +1,12 @@
 # Pointers
 
 ## Introduction
-Pointer is one of the most powerful features of the C programming language. Pointers enable programs to (i) simulate call-by-reference and (ii) to create and manipulate dynamic data structures (i.e. data structures that can grow and shrink at execution time, such as linked lists, queues, stacks and trees).
+- A pointer in C is a way to share a memory address among different contexts (primarily functions). 
+- They are primarily used whenever a function needs to modify the content of a variable that it does not own.
+- Pointer is one of the most powerful features of the C programming language. 
+- Pointers enable programs to:-   
+     i- simulate call-by-reference and  
+     ii- to create and manipulate dynamic data structures (i.e. data structures that can grow and shrink at execution time, such as linked lists, queues, stacks and trees).  
 
 ## Pointer Variable Definitions and Initialization
 - Pointers are variables whose values are memory addresses. 
