@@ -1,0 +1,16 @@
+Data recovery, password recovery, video conversion, and PDF conversion spam. Has various other names such as SmartKey. The scale of the spam and the fact that multiple malware programs have been found on these IP addresses suggest that the conduct originates from a criminal organization.
+
+IP addresses:
+
+54.201.153.20
+184.168.229.155
+54.69.177.37
+67.20.74.163
+50.87.141.154
+
+Domains:
+
+advancedpdfconverter.com www.tenorshare.com 
+androiddatarecoverypro.com any-data-recovery.com
+card-data-recovery.com excel-password-recovery.net
+fix-computer.net
