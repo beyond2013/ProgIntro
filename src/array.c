@@ -13,7 +13,7 @@ int main(void)
 		}
 	}
 
-
+  printf("%d", matrix[5][5]);
 	return 0;
 }
 
