@@ -16,7 +16,7 @@ So, in summary, repetitive statements or loops in programming are essential beca
 
 Sample programs using for, while, and do while loops:
 
-[for loop](../src/for.c)
-[while loop](../src/while.c)
-[do while loop](../src/dowhile.c)
+- [for loop](../src/for.c)
+- [while loop](../src/while.c)
+- [do while loop](../src/dowhile.c)
 
