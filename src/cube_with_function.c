@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int number=0;
+int number=0;   // global variable -disadvantage visible to all functions within this file
 void mycube();
 
 int main()
