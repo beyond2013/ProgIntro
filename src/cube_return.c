@@ -1,6 +1,6 @@
 #include <stdio.h>
+#include "mycube.h"
 
-int mycube(int);  // function declare
 
 int main()
 {
@@ -15,11 +15,6 @@ int main()
 }
 
 
-int mycube(int num)  // function definition 
-{
-
-  return num * num * num ;
-}
 
 
 

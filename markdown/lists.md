@@ -8,3 +8,6 @@
 
 ![example of a linked list](../figs/linked-list.png "Example of a linked list")
 
+- Head points to the first node of the list, if it is NULL the list is considered empty
+- The pointer of the last node also contains NULL to indicate the end of the list
+- All the	nodes of linked list are stored 
