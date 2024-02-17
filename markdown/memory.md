@@ -1,6 +1,8 @@
 # Static and Dynamic Memory Allocation
 
-Sure! Let's start with a brief explanation of static and dynamic memory allocation in C.
+**Note: Following explanation is generated using ChatGPT ** 
+
+ Let's start with a brief explanation of static and dynamic memory allocation in C.
 
 Static Memory Allocation:
 - Static memory allocation refers to the allocation of memory at compile time. 
