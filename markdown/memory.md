@@ -1,6 +1,6 @@
 # Static and Dynamic Memory Allocation
 
-**Note: Following explanation is generated using ChatGPT ** 
+**Note: Following explanation is generated using ChatGPT** 
 
  Let's start with a brief explanation of static and dynamic memory allocation in C.
 
