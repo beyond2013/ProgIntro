@@ -23,7 +23,7 @@
 - [stack rolling and unrolling](markdown/stack.md)
 - [string and string operations](markdown/gfmCCharNString.md)
 - [pointers/references](markdown/pointers.md)
-- [static and dynamic memory allocation](memory.md)
+- [static and dynamic memory allocation](markdown/memory.md)
 - [File I/O operations](markdown/fileio.md)
 
 
