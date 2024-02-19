@@ -1,9 +1,5 @@
-/*
-!.gitignore
-!assignments/
-!figs/
-!markdown/
-!/src/*.c
-!readings/
-!pastpapers/
-
+/pdfs/
+/src/bin
+/courseAdmin/
+/sample/
+/submissions/
