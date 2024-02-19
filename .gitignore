@@ -3,7 +3,7 @@
 !assignments/
 !figs/
 !markdown/
-!/src/bin
+/src/bin/
 !src/*.c
 !readings/
 !pastpapers/
