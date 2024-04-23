@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h> // for system() 
 
 int main(int argc, char** argv)
 {
@@ -16,6 +15,5 @@ int main(int argc, char** argv)
 		printf("%s\n", argv[i]);
 	}
 
-	system("PAUSE");
 	return 0;
 }

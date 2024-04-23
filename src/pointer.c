@@ -1,14 +1,16 @@
-#include<stdio.h>
-int main (void)
+#include <stdio.h>
+int main(void)
 {
 	int a;
 	int *aPtr;
 
 	a = 7;
 	aPtr = &a;
-	printf("The address of a is %p \nThe value of aPtr is %p", &a, aPtr);
-	printf("\nThe value of a is %d \nThe value of *aPtr is %d", a, *aPtr);
-	printf("\n\nShowing that * and & are compelements of each other\n&*aPtr = %p\n*&aPtr = %p\n", &*aPtr, *&aPtr);
- 
-  return 0;
+	printf("The address of a is %p ", &a);
+	printf("\n The same can be achieved using pointer %p", aPtr);
+	printf("\n we have been accessing variable directly using its name");
+	printf("\n Indirectly accessing the value of a %d", *aPtr);
+	printf("\n");
+
+	return 0;
 }
