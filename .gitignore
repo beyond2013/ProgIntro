@@ -3,3 +3,8 @@
 /courseAdmin/
 /sample/
 /submissions/
+.vscode/
+src/.vscode
+markdown/*.pdf
+src/practice/
+assignments/*.pdf
