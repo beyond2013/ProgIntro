@@ -1,16 +1,16 @@
 /*
-Array: is a data structure. 
-It allows to store multiple values 
+Array: is a data structure.
+It allows to store multiple values
 of a single type.
 Values are stored in contiguous memory
-locations. 
+locations.
 */
 
-#include<stdio.h>
+#include <stdio.h>
 
 int main(void)
 {
-	int array[]={12, 5, 7, 9, 13};
+	int array[] = {12, 5, 7, 9, 13};
 
 	int sum;
 
@@ -20,7 +20,8 @@ int main(void)
 
 	printf("%d \n", array[1]);
 
+	printf("Enter a value to replace first element in array: ");
+	scanf("%d", &array[0]);
+	printf("\n First element after replacement is %d", array[0]);
 	return 0;
 }
-
-

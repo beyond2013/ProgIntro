@@ -12,7 +12,7 @@ Following suggestions can help you in learning the science and art of programmin
 
 5. Practice is the key, which means repeat, many students take pictures of the white board instead of taking notes, this is the modern trend but believe me when I say it will not help you in learning.
 
-6. Just as writing code is a skill you will learn over time, reading code whether it is written by you or by your teacher is another skill. Many students cannot correctly compile a program because they could not read what the instructor wrote on the whiteboard e.g. when the instructor wrote semicolon ; you for some reason read ,
+6. Just as writing code is a skill you will learn over time, reading code whether it is written by you or by your teacher is another skill. Many students cannot correctly compile a program because they could not read what the instructor wrote on the whiteboard e.g. when the instructor wrote semicolon ; you for some reason read comma ,
 
 7. When your program does not compile it will tell you in shape of warning or errors. Try to learn which type of errors are related to what kind of problems. e.g. "11. Statement missing ;" is telling you that you forgot to type a ; near line number 10 or 11. 
 

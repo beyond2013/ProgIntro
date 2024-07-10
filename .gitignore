@@ -9,3 +9,4 @@ markdown/*.pdf
 src/practice/
 assignments/*.pdf
 pastpapers/
+*.sh
