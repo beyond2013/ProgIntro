@@ -33,7 +33,13 @@ The accuracy of problem expression directly impacts the quality of the solution.
 
 - **Finding Solutions:**
 
-**Algorithmic Thinking:** Developing step-by-step procedures (algorithms) to solve the problem systematically. For example, sorting a list of numbers using a sorting algorithm ensures an efficient and reliable solution.
+**Algorithmic Thinking:** Developing step-by-step procedures (algorithms) to solve the problem systematically.Common strategies include:
+
+**Brute Force:** Exploring all possible solutions to find the correct one. While simple to implement, this method is often inefficient for large problems.
+
+**Divide and Conquer:** Breaking the problem into smaller subproblems, solving each independently, and combining their results. This approach is particularly effective in algorithms like merge sort and quicksort.
+
+**Dynamic Programming:** Solving complex problems by breaking them down into simpler overlapping subproblems and storing the results of solved subproblems to avoid redundant computations. Examples include the Fibonacci sequence and shortest path algorithms. 
 
 **Heuristics:** Employing rules of thumb or educated guesses to find approximate solutions. These methods are particularly useful when an exact solution is computationally challenging or unnecessary.
 
