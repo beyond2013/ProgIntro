@@ -28,14 +28,14 @@
 
 
 ## Reference Material
-- Starting out with Python, 4th Edition, Tony Gaddis.
-- Starting out with Programming Logic & Designs, 4th Edition, Tony Gaddis,
-- The C Programming Language, 2nd Edition by Brian W. Kernighan, Dennis M. Ritchie
-- Object Oriented Programming in C++ by Robert Lafore
-- Introduction to Computation and Programming Using Python: With Application to Understanding Data, 2nd Edition by Guttag, John
-- Practice of Computing Using Python, 3rd Edition by William Punch & Richard Enbody
-- C How to Program, 7th Edition by Paul Deitel & Harvey Deitel
-- Problem Solving and Program Design in C++, 7th Edition by Jeri R. Hanly & Elliot B. Koffman
+- [Starting out with Python, 4th Edition, Tony Gaddis.](https://amzn.to/4kvT7D4)
+- [Starting out with Programming Logic & Designs, 4th Edition, Tony Gaddis](https://amzn.to/43f7l5P)
+- [The C Programming Language, 2nd Edition by Brian W. Kernighan, Dennis M. Ritchie](https://amzn.to/4dzz84v)
+- [Object Oriented Programming in C++ by Robert Lafore](https://amzn.to/3H807rH)
+- [Introduction to Computation and Programming Using Python: With Application to Understanding Data, 2nd Edition by Guttag, John](https://amzn.to/43a9n78)
+- [Practice of Computing Using Python, 3rd Edition by William Punch & Richard Enbody](https://amzn.to/43aHRXa)
+- [C How to Program, 7th Edition by Paul Deitel & Harvey Deitel](https://amzn.to/3SWD7OJ)
+- [Problem Solving and Program Design in C, 7th Edition by Jeri R. Hanly & Elliot B. Koffman](https://amzn.to/4kDnGHo)
 
 ## Useful Online Resources
 - [HackerRank c language](https://www.hackerrank.com/domains/c)
